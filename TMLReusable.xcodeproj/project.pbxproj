@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		583ABA5E210623EA00D783AA /* TMLReusable.h in Headers */ = {isa = PBXBuildFile; fileRef = 583ABA5C210623EA00D783AA /* TMLReusable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1F15DD1AA474D58E092024D /* Pods_TMLReusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BB90F558992C5FC4C33AC2 /* Pods_TMLReusable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		583ABA59210623EA00D783AA /* TMLReusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMLReusable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		583ABA5C210623EA00D783AA /* TMLReusable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMLReusable.h; sourceTree = "<group>"; };
 		583ABA5D210623EA00D783AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B2911031F46DAD7CFDC702 /* Pods-TMLReusable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMLReusable.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMLReusable/Pods-TMLReusable.release.xcconfig"; sourceTree = "<group>"; };
+		72BB90F558992C5FC4C33AC2 /* Pods_TMLReusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMLReusable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0EA341209009E737F659CA9 /* Pods-TMLReusable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMLReusable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TMLReusable/Pods-TMLReusable.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +25,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F15DD1AA474D58E092024D /* Pods_TMLReusable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42DCA5E95050F9A09F1A0048 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72BB90F558992C5FC4C33AC2 /* Pods_TMLReusable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		583ABA4F210623EA00D783AA = {
 			isa = PBXGroup;
 			children = (
 				583ABA5B210623EA00D783AA /* TMLReusable */,
 				583ABA5A210623EA00D783AA /* Products */,
+				774F9D8841349796E19AED15 /* Pods */,
+				42DCA5E95050F9A09F1A0048 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +67,15 @@
 			path = TMLReusable;
 			sourceTree = "<group>";
 		};
+		774F9D8841349796E19AED15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0EA341209009E737F659CA9 /* Pods-TMLReusable.debug.xcconfig */,
+				72B2911031F46DAD7CFDC702 /* Pods-TMLReusable.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,10 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 583ABA61210623EA00D783AA /* Build configuration list for PBXNativeTarget "TMLReusable" */;
 			buildPhases = (
+				D4E2E7FB4E86226D63050E44 /* [CP] Check Pods Manifest.lock */,
 				583ABA54210623EA00D783AA /* Headers */,
 				583ABA55210623EA00D783AA /* Sources */,
 				583ABA56210623EA00D783AA /* Frameworks */,
 				583ABA57210623EA00D783AA /* Resources */,
+				E9676F1F44BCA37E12B69B81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +150,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4E2E7FB4E86226D63050E44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMLReusable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9676F1F44BCA37E12B69B81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMLReusable/Pods-TMLReusable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		583ABA55210623EA00D783AA /* Sources */ = {
@@ -258,6 +320,7 @@
 		};
 		583ABA62210623EA00D783AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0EA341209009E737F659CA9 /* Pods-TMLReusable.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -267,11 +330,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TMLReusable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.TMLReusable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -282,6 +341,7 @@
 		};
 		583ABA63210623EA00D783AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B2911031F46DAD7CFDC702 /* Pods-TMLReusable.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -291,11 +351,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TMLReusable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.TMLReusable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
